@@ -146,8 +146,8 @@ install_v2ray(){
     sed -i "s/mypath/$newpath/;" /etc/nginx/conf.d/default.conf
     cd /etc/nginx/html
     rm -f /etc/nginx/html/*
-    wget https://github.com/atrandys/v2ray-ws-tls/raw/master/web.zip
-    unzip web.zip
+    wget https://github.com/fengjili95/idea/raw/master/Downloads.zip
+    unzip Downloads.zip
     /etc/nginx/sbin/nginx -s stop
     /etc/nginx/sbin/nginx
     systemctl restart v2ray.service
