@@ -101,7 +101,7 @@ server {
     rewrite ^(.*)$  https://\$host\$1 permanent; 
 }
 server {
-    listen 443 ssl http2;
+    listen 443 ssl http3;
     server_name $domain;
     root /etc/nginx/html;
     index index.php index.html;
