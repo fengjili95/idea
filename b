@@ -39,7 +39,7 @@ install_nginx(){
     wget https://nginx.org/download/nginx-1.17.5.tar.gz
     tar xf nginx-1.17.5.tar.gz && rm nginx-1.17.5.tar.gz
     cd nginx-1.17.5
-    ./configure --prefix=/etc/nginx --with-openssl=../openssl-1.1.1 --with-openssl-opt='enable-tls1_3' --with-http_v3_module --with-http_ssub_module sl_module --with-http_gzip_static_module --with-http_stub_status_module --with-http_--with-stream --with-stream_ssl_module
+    ./configure --prefix=/etc/nginx --with-openssl=../openssl-1.1.1 --with-openssl-opt='enable-tls1_3' --with-http_v2_module --with-http_ssub_module sl_module --with-http_gzip_static_module --with-http_stub_status_module --with-http_--with-stream --with-stream_ssl_module
     make && make install
     
     green "====输入解析到此VPS的域名===="
@@ -101,7 +101,7 @@ server {
     rewrite ^(.*)$  https://\$host\$1 permanent; 
 }
 server {
-    listen 443 ssl http3;
+    listen 443 ssl http2;
     server_name $domain;
     root /etc/nginx/html;
     index index.php index.html;
@@ -120,7 +120,7 @@ server {
     location /mypath {
         proxy_redirect off;
         proxy_pass http://127.0.0.1:10001; 
-        proxy_http_version 3.0;
+        proxy_http_version 1.1;
         proxy_set_header Upgrade \$http_upgrade;
         proxy_set_header Connection "upgrade";
         proxy_set_header Host \$http_host;
