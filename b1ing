@@ -24,7 +24,7 @@ Error="${Red}[错误]${Font}"
 
 v2ray_conf_dir="/etc/v2ray"
 nginx_conf_dir="/etc/nginx/conf/conf.d"
-v2ray_conf="${v2ray_conf_dir}/config1.json"
+v2ray_conf="${v2ray_conf_dir}/config.json"
 nginx_conf="${nginx_conf_dir}/v2ray.conf"
 nginx_dir="/etc/nginx"
 nginx_openssl_src="/usr/local/src"
@@ -352,7 +352,7 @@ acme(){
 }
 v2ray_conf_add(){
     cd /etc/v2ray
-    wget https://raw.githubusercontent.com/fengjili95/idea/master/config1.json -O config1.json
+    wget https://raw.githubusercontent.com/fengjili95/idea/master/config.json -O config.json
 modify_port_UUID
 judge "V2ray 配置修改"
 }
