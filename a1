@@ -352,7 +352,7 @@ acme(){
 }
 v2ray_conf_add(){
     cd /etc/v2ray
-    wget https://raw.githubusercontent.com/fengjili95/idea/master/config -O config
+    wget https://raw.githubusercontent.com/fengjili95/idea/master/config1.json -O config1.json
 modify_port_UUID
 judge "V2ray 配置修改"
 }
