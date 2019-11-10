@@ -24,7 +24,7 @@ Error="${Red}[错误]${Font}"
 
 v2ray_conf_dir="/etc/v2ray"
 nginx_conf_dir="/etc/nginx/conf/conf.d"
-v2ray_conf="${v2ray_conf_dir}/config.json"
+v2ray_conf="${v2ray_conf_dir}/config1.json"
 nginx_conf="${nginx_conf_dir}/v2ray.conf"
 nginx_dir="/etc/nginx"
 nginx_openssl_src="/usr/local/src"
