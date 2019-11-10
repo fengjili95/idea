@@ -28,7 +28,7 @@ v2ray_conf="${v2ray_conf_dir}/config.json"
 nginx_conf="${nginx_conf_dir}/v2ray.conf"
 nginx_dir="/etc/nginx"
 nginx_openssl_src="/usr/local/src"
-nginx_version="1.16.1"
+nginx_version="1.17.5"
 openssl_version="1.1.1d"
 #生成伪装路径
 camouflage=`cat /dev/urandom | head -n 10 | md5sum | head -c 8`
@@ -372,7 +372,7 @@ nginx_conf_add(){
         location /ray/ 
         {
         proxy_redirect off;
-        proxy_pass http://127.0.0.1:10000;
+        proxy_pass http://127.0.0.1:10001;
         proxy_http_version 1.1;
         proxy_set_header Upgrade \$http_upgrade;
         proxy_set_header Connection "upgrade";
