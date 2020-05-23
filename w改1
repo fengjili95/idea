@@ -28,8 +28,8 @@ v2ray_conf="${v2ray_conf_dir}/config.json"
 nginx_conf="${nginx_conf_dir}/v2ray.conf"
 nginx_dir="/etc/nginx"
 nginx_openssl_src="/usr/local/src"
-nginx_version="1.17.5"
-openssl_version="1.1.1d"
+nginx_version="1.17.9"
+openssl_version="1.1.1g"
 #生成伪装路径
 camouflage=`cat /dev/urandom | head -n 10 | md5sum | head -c 8`
 
